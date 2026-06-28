@@ -1,0 +1,10 @@
+規格發想
+
+目前目標：可以自動發文至instagram和threads
+
+Line Bot 去接threads api發送訊息文章(因Line messaging api需要付費+需要創立官方帳號故取消)已取消!!!
+
+改直接自己寫前端UI，預計要包成.exe 使用Python相關套件，直接串meta APIs
+前端就是一個textbox+一個發送按鈕
+
+相關套件(要寫進requirements.txt)安裝
