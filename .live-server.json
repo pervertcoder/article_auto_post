@@ -1,0 +1,8 @@
+{
+  "port": 3000,
+  "verbose": true,
+  "host": "127.0.0.1",
+  "open": false,
+  "root": "/frontend",
+  "file": "frontend/homepage/index.html"
+}
