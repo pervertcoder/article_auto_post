@@ -3,6 +3,6 @@
   "verbose": true,
   "host": "127.0.0.1",
   "open": false,
-  "root": "/frontend",
+  "root": ".",
   "file": "frontend/homepage/index.html"
 }
