@@ -6,9 +6,9 @@ from config import meta_thread_api_token, thread_user_id
 app = FastAPI()
 
 origins = [
-    "http://localhost:8000",
-    "http://localhost:80",
-    "http://localhost:3000",
+    "http://127.0.0.1:8000",
+    "http://127.0.0.1:80",
+    "http://127.0.0.1:3000",
 ]
 
 app.add_middleware(
@@ -19,6 +19,6 @@ app.add_middleware(
     allow_headers = ["*"],
 )
 
-@app.get("/")
-def root() -> dict:
+@app.get("/health")
+def health_check() -> dict:
     return {"message" : "ok"}
