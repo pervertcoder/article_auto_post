@@ -1,7 +1,9 @@
 from fastapi import FastAPI, Header
 from fastapi.middleware.cors import CORSMiddleware
 
+from request_response_schema import Request_instagram
 from config import meta_thread_api_token, thread_user_id
+from data_cleaning import cleaning_data
 
 app = FastAPI()
 
@@ -19,6 +21,21 @@ app.add_middleware(
     allow_headers = ["*"],
 )
 
+prefix = "post"
+
 @app.get("/health")
 def health_check() -> dict:
     return {"message" : "ok"}
+
+@app.post(f"/{prefix}/instagram")
+def post_ig(request:Request_instagram) -> dict:
+    ...
+
+@app.post(f"/{prefix}/threads")
+def post_threads() -> dict:
+    ...
+
+
+@app.post(f"/{prefix}/X")
+def post_X() -> dict:
+    ...
