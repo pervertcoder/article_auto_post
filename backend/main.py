@@ -38,7 +38,7 @@ def post_ig(request:Request_instagram) -> dict:
 @app.post("/poster/threads", response_model=Response_threads)
 def post_threads(request: Request_threads) -> dict:
 
-    # 後端去檢查是否是空資料
+    # 後端去檢查前端是否傳空資料(不包含空白)
     if not request.content: # request is not dict, but an object(Request_threads is a class not dict), that is why it cannot use dict[key_name:str]
         return {"ok": False}
     
