@@ -56,7 +56,7 @@ buttonThreads.addEventListener("click", () => {
   threadApi(threadsAPIUrl);
 });
 
-// 健康測試（間隔10秒）
+// 健康測試（間隔1分鐘）
 setInterval(() => {
-  checkHealth(checkHealthAPIUrl)
-}, 10000);
+  checkHealth(checkHealthAPIUrl);
+}, 600000);
