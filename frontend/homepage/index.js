@@ -3,7 +3,6 @@
 // DOM變數
 const buttonIg = document.getElementById("ig");
 const buttonThreads = document.getElementById("threads");
-const post = document.getElementById("post");
 
 const buttonAddParagraph = document.getElementById("add");
 const buttonDeleteParagraph = document.getElementById("delete");
@@ -76,22 +75,30 @@ const checkHealth = async function (url) {
 // 用健康測試API測試按鈕
 const testAPIUrl = "http://127.0.0.1:8000/health";
 const apiTest = async function (url) {
+  const poster_context = document.querySelectorAll(".poster");
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
 
-  post.value = "test";
+  const nodeListNum = poster_context.length;
+  let context_arr = [];
+  for (let i = 0; i < nodeListNum; i++) {
+    // console.log(poster_context[i].value);
+    context_arr.push(poster_context[i].value);
+  }
+  console.log(context_arr);
 };
 
 // Threads post API
 const threadsAPIUrl = "http://127.0.0.1:8000/poster/threads";
 const threadApi = async function (url) {
+  const poster_context = document.querySelectorAll(".poster");
   // 這邊需要考慮空白
-  const no_space_string = post.value.trim();
-  if (no_space_string === "") {
-    alert("please enter at least one word");
-    return;
-  }
+  // const no_space_string = post.value.trim();
+  // if (no_space_string === "") {
+  //   alert("please enter at least one word");
+  //   return;
+  // }
   const response = await fetch(url, {
     method: "POST",
     headers: {
