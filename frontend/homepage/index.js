@@ -42,7 +42,6 @@ const alphabet = [
 ];
 const addParagraphFun = function () {
   const addedParagraph = document.createElement("textarea");
-  addedParagraph.name = "post";
   addedParagraph.id = "post" + "_" + alphabet[dataId];
   addedParagraph.classList = "poster";
   addedParagraph.dataset.id = dataId + 1;
