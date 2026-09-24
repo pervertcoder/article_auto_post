@@ -50,8 +50,8 @@ const addParagraphFun = function () {
   addedParagraph.cols = 30;
 
   if (dataId == 0 || dataId <= 27) {
-  const addParagraph = parentSection.appendChild(addedParagraph);
-  dataId++;
+    const addParagraph = parentSection.appendChild(addedParagraph);
+    dataId++;
   }else {
     console.log("reach maximun number of paragraph");
   }
