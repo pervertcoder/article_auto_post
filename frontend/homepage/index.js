@@ -69,7 +69,7 @@ const deleteParagraphFun = function () {
 // 呼叫API的函式跟參數
 
 // 健康測試API
-const checkHealthAPIUrl = "http://127.0.0.1:8000/health";
+const checkHealthAPIUrl = "/health";
 const checkHealth = async function (url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -77,7 +77,7 @@ const checkHealth = async function (url) {
 };
 
 // 用健康測試API測試按鈕
-const testAPIUrl = "http://127.0.0.1:8000/health";
+const testAPIUrl = "/health";
 const apiTest = async function (url) {
   const poster_context = document.querySelectorAll(".poster");
   const response = await fetch(url);
@@ -94,7 +94,7 @@ const apiTest = async function (url) {
 };
 
 // Threads post API
-const threadsAPIUrl = "http://127.0.0.1:8000/poster/threads";
+const threadsAPIUrl = "/poster/threads";
 const threadApi = async function (url) {
   const poster_context = document.querySelectorAll(".poster");
   // 這邊需要考慮空白
