@@ -39,6 +39,7 @@ const alphabet = [
   "x",
   "y",
   "z",
+  "AA"
 ];
 const addParagraphFun = function () {
   const addedParagraph = document.createElement("textarea");
@@ -48,8 +49,12 @@ const addParagraphFun = function () {
   addedParagraph.rows = 10;
   addedParagraph.cols = 30;
 
+  if (dataId == 0 || dataId <= 27) {
   const addParagraph = parentSection.appendChild(addedParagraph);
   dataId++;
+  }else {
+    console.log("reach maximun number of paragraph");
+  }
 };
 const deleteParagraphFun = function () {
   if (parentSection.childElementCount >= 4) {
