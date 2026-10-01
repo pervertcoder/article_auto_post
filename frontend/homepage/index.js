@@ -69,7 +69,7 @@ const deleteParagraphFun = function () {
 // 呼叫API的函式跟參數
 
 // 健康測試API
-const checkHealthAPIUrl = "/health";
+const checkHealthAPIUrl = "http://127.0.0.1:8000/health";
 const checkHealth = async function (url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -136,4 +136,4 @@ buttonDeleteParagraph.addEventListener("click", () => {
 // 健康測試（間隔1分鐘）
 setInterval(() => {
   checkHealth(checkHealthAPIUrl);
-}, 600000);
+}, 60000);
