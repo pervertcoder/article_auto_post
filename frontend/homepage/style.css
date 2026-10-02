@@ -25,10 +25,34 @@ body {
   flex-direction: column;
 }
 
-.workarea textarea {
+.paragraph_work {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.paragraph_work textarea {
+  width: 100%;
   margin-top: 50px;
   resize: none;
   border-radius: 5px;
+}
+
+.calculator {
+  margin-top: 5px;
+  /* background-color: black; */
+  padding: 1%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calculator p {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  width: 10%;
 }
 
 .paragraph_function {
